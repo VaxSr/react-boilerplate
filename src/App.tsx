@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import NavbarLayout from "./layouts/NavbarLayout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import NotFound from "./pages/NotFound/NotFound";
+// import AuthProvider from "./context/AuthProvider";
 
 const queryClient = new QueryClient();
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
+        {/* <AuthProvider> */}
         <BrowserRouter>
           <Routes>
             <Route element={<NavbarLayout />}>
@@ -21,6 +23,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
+        {/* </AuthProvider> */}
       </QueryClientProvider>
     </>
   );
